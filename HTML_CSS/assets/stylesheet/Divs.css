@@ -1,0 +1,51 @@
+#content {
+  width: 900px;
+  border: 2px solid fuchsia;
+  padding: 20px; /* Adds 20px of space to all sides */
+  margin: 20px auto;  /* Adds 20px to the top & bottom & centers left/right */
+background: #EABC20;
+}
+
+body{
+background-image: url(http://greenjersey.org/wp-content/uploads/2008/08/newyorkskyline.gif)}
+
+#next {
+border: 60px;
+    background: white;
+    
+}
+
+.crazy-color {
+  color: fuchsia;
+}
+
+img {
+width: 100px;
+
+float: right;}
+
+#footer {
+    height: 20px;
+    
+    width: 900px;
+    
+    border: 10px yellow;
+    
+    border-style: groove;
+    
+    text-align: center;
+        
+    background: #336699;
+
+    text-align: center;
+    
+    margin-top: 2%;
+    
+    margin-bottom: 2%;
+    
+    padding: 20px;
+
+    clear: both;
+
+    color: white;
+}

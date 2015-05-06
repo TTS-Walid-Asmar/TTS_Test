@@ -1,0 +1,11 @@
+body {
+  width: 900px;
+  margin: auto;
+}
+
+p {
+  color: blue;
+  text-align: center;
+}
+.red-text {
+    color: darkred}

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyString
+  uses: MyText
+  StartingAmount: 1
+  AmountToPurchase: 1
+  due: 2015-05-05
+  done: false
+
+two:
+  item: MyString
+  uses: MyText
+  StartingAmount: 1
+  AmountToPurchase: 1
+  due: 2015-05-05
+  done: false

@@ -1,0 +1,41 @@
+<%= form_for(@fridge_inventory) do |f| %>
+  <% if @fridge_inventory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fridge_inventory.errors.count, "error") %> prohibited this fridge_inventory from being saved:</h2>
+
+      <ul>
+      <% @fridge_inventory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :item %><br>
+    <%= f.text_field :item %>
+  </div>
+  <div class="field">
+    <%= f.label :uses %><br>
+    <%= f.text_area :uses %>
+  </div>
+  <div class="field">
+    <%= f.label :StartingAmount %><br>
+    <%= f.number_field :StartingAmount %>
+  </div>
+  <div class="field">
+    <%= f.label :AmountToPurchase %><br>
+    <%= f.number_field :AmountToPurchase %>
+  </div>
+  <div class="field">
+    <%= f.label :due %><br>
+    <%= f.date_select :due %>
+  </div>
+  <div class="field">
+    <%= f.label :done %><br>
+    <%= f.check_box :done %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

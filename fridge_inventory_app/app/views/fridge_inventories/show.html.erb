@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @fridge_inventory.item %>
+</p>
+
+<p>
+  <strong>Uses:</strong>
+  <%= @fridge_inventory.uses %>
+</p>
+
+<p>
+  <strong>Startingamount:</strong>
+  <%= @fridge_inventory.StartingAmount %>
+</p>
+
+<p>
+  <strong>Amounttopurchase:</strong>
+  <%= @fridge_inventory.AmountToPurchase %>
+</p>
+
+<p>
+  <strong>Due:</strong>
+  <%= @fridge_inventory.due %>
+</p>
+
+<p>
+  <strong>Done:</strong>
+  <%= @fridge_inventory.done %>
+</p>
+
+<%= link_to 'Edit', edit_fridge_inventory_path(@fridge_inventory) %> |
+<%= link_to 'Back', fridge_inventories_path %>
