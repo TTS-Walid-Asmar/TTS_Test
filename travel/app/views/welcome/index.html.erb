@@ -13,5 +13,5 @@
 <p>This picture is from <%= @homeland %> 
 </p>
 <% @pics.each do |pics| %>
-<%= image_tag pics %>
+<p><%= image_tag pics, class: "img-responsive", width: '550' %></p>
 <% end %>

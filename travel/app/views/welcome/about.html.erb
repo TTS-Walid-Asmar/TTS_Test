@@ -11,3 +11,6 @@
     background: <%= @color %>;
   }
 </style>
+  <%= link_to "Blue", {controller: "welcome", action: "about", color: "blue"}, class: "btn btn-primary" %>
+
+<%= link_to "Red", {controller: "welcome", action: "about", color: "red"}, class: "btn btn-danger" %>
