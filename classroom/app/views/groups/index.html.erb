@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Class</h1>
+
+<div class="panel panel-default">
+
+  <!-- Default panel contents -->
+  <div class="panel-heading">Students</div>
+  <div class="panel-body">
+    <p>Table</p>
+  </div>
+
+  <!-- Table -->
+    <% @groups.each do |gp| %>
+
+    <table class="table">
+        <hr noshade size=1>
+        <td><%= gp.student %></td>
+        <td><%= gp.teacher %></td>
+        <td><%= gp.grade %></td>
+        <td><%= gp.Pet %></td>
+    </table>
+
+<br>
+        <% end %>
+
+        </div>
+
+<!--
+  <div class="btn-group">
+
+
+        </div>
+-->
+
+
+<!-- 2nd Attempt -->
+
+<h1>Class</h1>
+
+<div class="panel panel-default">
+
+  <!-- Default panel contents -->
+  <div class="panel-heading">Students</div>
+  <div class="panel-body">
+    <% @groups.each do |gp| %>
+
+      <p>Table</p>
+  </div>
+
+  <!-- Table -->
+    <table class="table">
+        <td><%= gp.student %></td>
+        <td><%= gp.teacher %></td>
+        <td><%= gp.grade %></td>
+        <td><%= gp.Pet %></td>
+        <hr noshade size=1>
+    </table>
+
+<br>
+<!--
+  <div class="btn-group">
+
+      <%= link_to 'New Classmate', new_group_path, class: "btn btn-success" %>
+        <%= link_to 'Show', gp, class: "btn btn-info" %>
+        <%= link_to 'Edit', edit_group_path(gp), class: "btn btn-warning" %>
+        <%= link_to 'Destroy', gp, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+        </div>
+    <% end %>
+-->
+    </div>
+
+<%= link_to 'New Classmate', new_group_path %>
