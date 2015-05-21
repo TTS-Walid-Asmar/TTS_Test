@@ -14,8 +14,8 @@
   <div class="input-group-lg">
     <%= f.text_field :title, class: 'form-control has-success', placeholder: 'Title' %><br>
   </div>
-  <div class="input-group-lg">
-    <%= f.text_field :author, class: 'form-control', placeholder: 'Author' %><br>
+  <div class="form-group cant-see-me">
+      <%= f.number_field :user_id, value: current_user.id %>
   </div>
   <div class="input-group-lg">
     <%= f.text_area :blog_entry, class: 'form-control', placeholder: 'Blog Entry Text' %><br>
