@@ -8,21 +8,38 @@ class EpicenterController < ApplicationController
     # We pull in all the tweets...
     @tweets = Tweet.all
 
+      @users = User.all
+
+      @follower_count = 0
+
+      if user_signed_in?
+          @tweets.each do |tweet|
+              current_user.following.each do |f|
+                  if tweet.user_id == f
+                      @following_tweets.push(tweet)
+
+
     # Then we sort through the tweets
     # to find ones asscoiated with
     # users from the current_user's
     # following array.
 
-    @tweets.each do |tweet|
-      current_user.following.each do |f|
-        if tweet.user_id == f
-          @following_tweets.push(tweet)
           # And those tweets are pushed
           # into the @following_tweets array
           # we added to our view.
         end
       end
     end
+          @users.each do |user|
+              if user.following.include?(current_user.id)
+                  @following_count =+1
+              end
+      end
+      else
+          redirect_to_new_user_session_path
+      end
+          @tweet = Tweet.new
+
   end
 
   def show_user
