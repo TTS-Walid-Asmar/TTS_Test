@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :songs
   resources :artists
   get 'rock/roll'
 
     root 'rock#roll'
+
+        get 'profile/user_page'
+
+
+    get 'user_profiles' =>    'rock#user_profiles'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

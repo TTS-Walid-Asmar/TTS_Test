@@ -1,0 +1,20 @@
+    <div class="well left-well">
+     <p>Hello <%= current_user.name %>!</p>
+<p>Here is what your friends are saying:</p>
+        </div>
+
+<% @following_tweets.each do |f| %>
+<ul class="list-group">
+<li class="list-group-item">
+           <strong><%= link_to f.user.username, user_profile_path(id: f.user.id) %> tweeted <%= time_ago_in_words(f.created_at) %> ago</strong><p></p>
+        <%= f.message %><p></p>
+        <%= link_to 'Details', f %>
+        <% if current_user.id == f.user.id %>
+        <%= link_to 'Edit', edit_f_path(f) %>
+        <%= link_to 'Delete Tweet', f, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+        </li>
+
+    <% end %>
+    </ul>
+

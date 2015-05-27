@@ -22,7 +22,8 @@
 
                 <nav>
                 <ul class="nav masthead-nav">
-                  <li><%= link_to "Your Top 5", root_path %></li>
+                    <li><%= link_to "Your Profile", root_path %></li>
+<!--                    , user_profiles_path(id: current_user.id) -->
           <li><%= link_to "Artists", artists_path %></li>
           <li><%= link_to "Songs", songs_path %></li>
                 </ul>
@@ -32,6 +33,7 @@
           <div class="inner cover">
             <%= yield %>
           </div>
+
           <div class="mastfoot">
             <div class="inner">
               <p>King PaTi's Top 5</p>
