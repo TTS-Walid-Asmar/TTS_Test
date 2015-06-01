@@ -12,7 +12,6 @@
   <% end %>
 
 
-
  <div class="field form-group">
     <%= f.label :city %><br>
     <%= f.text_field :city, class: "form-control" %>
@@ -32,6 +31,18 @@
   <div class="field form-group">
     <%= f.label "Photo" %><br>
     <%= f.file_field :avatar %>
+  </div>
+    <div class="field form-group">
+    <%= f.label :address %><br>
+    <%= f.text_field :address, class: "form-control" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude, class: "form-control" %>
+  </div>
+   <div class="field form-group">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude, class: "form-control" %>
   </div>
   <div class="actions form-group">
       <%= f.submit class: "btn btn-success" %>

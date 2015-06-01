@@ -1,4 +1,8 @@
 <h1>Welcome to my Travel Site</h1>
+
+<div id="map-canvas"></div>
+
+
 <p>This is my very awesome travel site.</p>
 
 <h4>My family is from <%= @homeland %></h4>
@@ -7,11 +11,7 @@
 <% end %>
 </ol>
 </p>
-<%= image_tag "travel_nica", alt: "Nica",
-                          id: "Nica",
-                          class: "country" %>
-<p>This picture is from <%= @homeland %> 
+<%= image_tag "nica_vol.jpg" %>
+<p>This picture is from <%= @homeland %>
 </p>
-<% @pics.each do |pics| %>
-<p><%= image_tag pics, class: "img-responsive", width: '550' %></p>
-<% end %>
+

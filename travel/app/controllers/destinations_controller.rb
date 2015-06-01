@@ -5,15 +5,21 @@ class DestinationsController < ApplicationController
   # GET /destinations.json
 def index
     if params[:country] == nil
-        @destinations = Destination.all 
+        @destinations = Destination.all
     else
       @destinations = Destination.where(country: params[:country].titleize)
-    end  
+    end
     @my_countries = Destination.select(:country).order(:country).distinct
 
   end
 
+        def search
+        if params[:search].present?
+            @destinations = Destination.search(params[:search])
+        else @destinations = Destination.all
+        end
 
+        end
   # GET /destinations/1
   # GET /destinations/1.json
   def show
@@ -75,7 +81,9 @@ def index
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+
     def destination_params
-      params.require(:destination).permit(:city, :country, :description, :population, :avatar)
+        params.require(:destination).permit(:city, :country, :description, :latitude, :longitude, :address)
     end
+
 end

@@ -1,13 +1,38 @@
-<h1><%= @destination.city %>, <%= @destination.country %></h1>
+<div id="destination-map">
+    <%= javascript_tag do %>
+    latitude = '<%= j @destination.latitude.to_s %>';
+    longitude = '<%= j @destination.longitude.to_s %>';
+    address = '<%= j @destination.address %>';
+    description = '<%= j @destination.description %>';
+    <% end %>
+</div>
 
-<% if destination.avatar_file_name != nil %>
-   <%= image_tag destination.avatar.url, class: "img-responsive" %>
-<% end %>
+<p>
+  <strong>Address:</strong>
+  <%= @destination.address %>
+</p>
 
-<h2><strong>Population: </strong><%= @destination.population %></h2>
-<p><%= @destination.description %></p>
+<p>
+  <strong>City:</strong>
+  <%= @destination.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @destination.country %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @destination.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @destination.longitude %>
+</p>
 
 <div class="btn-group">
-  <%= link_to 'Edit', edit_destination_path(@destination), class: "btn btn-default" %> 
+  <%= link_to 'Edit', edit_destination_path(@destination), class: "btn btn-default" %>
   <%= link_to 'Back', destinations_path, class: "btn btn-default" %>
 </div>

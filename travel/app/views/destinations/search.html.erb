@@ -1,0 +1,18 @@
+  <div class="row">
+    <% @destinations.each do |destination| %>
+      <div class="col-md-4">
+       <div class="panel panel-default">
+        <div class="panel-bod">
+         <h2><%= destination.city %></h2>
+         <h3><%= destination.country %> </h3>
+            <% if destination.avatar_file_name != nil %>
+            <%= image_tag destination.avatar.url, class: "img-responsive" %>
+            <% end %>
+            <p><strong>Population: </strong><%= destination.population %></p>
+            <p><%= destination.description %></p>
+           </div>
+          </div>
+      </div>
+                  <% end %>
+
+</div>
